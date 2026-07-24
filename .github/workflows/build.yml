@@ -17,10 +17,13 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    - name: Run Fabric Build Action
-      uses: gradle/actions/setup-gradle@v3
+    - name: Setup Gradle Build Environment
+      uses: gradle/actions/setup-gradle@v4
       with:
-        arguments: build --no-daemon
+        gradle-version: 8.7
+
+    - name: Build Mod with Global Gradle
+      run: gradle build
 
     - name: Upload Mod Jar Artifact
       uses: actions/upload-artifact@v4
