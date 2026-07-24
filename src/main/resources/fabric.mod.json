@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "horrormod",
+  "version": "1.0.0",
+  "name": "Horror Stalker Mod",
+  "description": "An unstoppable cycle of terror.",
+  "authors": [ "Mobile Dev" ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/horrormod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.horror.HorrorMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21"
+  }
+}
