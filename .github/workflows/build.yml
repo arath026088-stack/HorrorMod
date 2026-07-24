@@ -17,11 +17,10 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    - name: Setup Gradle
+    - name: Run Fabric Build Action
       uses: gradle/actions/setup-gradle@v3
-
-    - name: Build with Gradle
-      run: gradle build
+      with:
+        arguments: build --no-daemon
 
     - name: Upload Mod Jar Artifact
       uses: actions/upload-artifact@v4
